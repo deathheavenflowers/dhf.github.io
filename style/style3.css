@@ -111,6 +111,16 @@ border-radius: 100%;
     width: 100%;
 }
 
+
+
+.product-card-artist img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* If you want circular images */
+}
+
+
+
 /* Estilo para el texto de "BUY CD" */
 .buy-text {
     font-size: 1rem;
@@ -190,7 +200,7 @@ footer {
         gap: 10px;
     }
 
-    .product-card-artist {
+    .product-card {
         width: 100%;
     }
 
@@ -198,13 +208,18 @@ footer {
         margin: 0 10px;
     }
 
-    .nav-list a {
-        font-size: 1rem;
-    }
+      .nav-list a {
+        padding: 10px;
+        font-size: 1.5rem; 
+}
+@media (max-width: 480px) {
+    .header-img img, .product-card img {
+    max-width: 100%;
+    height: auto;
 }
 
 @media (max-width: 480px) {
-    .header-img img {
-        max-width: 300px;
+    h1, h2, h3 {
+        font-size: 1.5rem; /* Smaller text on small screens */
     }
 }
