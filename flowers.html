@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Death Heaven Flowers</title>
+    <link rel="stylesheet" href="style/style3.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-img">
+            <a href="/">
+                <img src="https://f4.bcbits.com/img/0034266897_100.png" alt="Death Heaven Flowers">
+            </a>
+        </div>
+        <nav class="top-bar">
+            <ul class="nav-list">
+                <li><a href="index.html">  The Realm  </a></li>
+                <li><a href="flowers.html"><u>Flowers</u></a></li>
+                <li><a href="#">Death Heaven</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="novedades">
+            <!-- Sección de productos unificada en una sola grilla -->
+            <div class="product-grid">
+                <!-- Primer producto -->
+                <div class="product-card-artist">
+                    <div class="container-box-artist">
+                        <img src="https://f4.bcbits.com/img/a2209137850_16.jpg">
+                    </div>
+                    <div class="product-info-artist">
+                        <a href="https://landwhales.bandcamp.com/album/null-days" class="buy-text">Land Whales</a>
+                    </div>
+                </div>
+
+                <!-- Segundo producto -->
+                <div class="product-card-artist">
+                    <div class="container-box-artist">
+                        <img src="https://f4.bcbits.com/img/a0077169421_16.jpg">
+                    </div>
+                    <div class="product-info-artist">
+                        <a href="https://elllantodeezis.bandcamp.com/music" class="buy-text">El Llanto de Ezis</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Death Heaven Flowers. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+    // Selecciona todas las tarjetas de producto
+    const productCards = document.querySelectorAll('.product-card');
+
+    // Configuración del IntersectionObserver
+    const observerOptions = {
+        root: null, // El root es el viewport del navegador
+        rootMargin: '0px', // Sin margen adicional
+        threshold: 0.2 // El 20% de la tarjeta debe estar en vista para activarse
+    };
+
+    // Función que manejará la aparición de las tarjetas
+    const handleIntersection = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Cuando el producto entra en vista, se agrega la clase 'visible'
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Deja de observar la tarjeta una vez ha aparecido
+            }
+        });
+    };
+
+    // Creamos el IntersectionObserver con la función
+    const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+    // Empezamos a observar cada tarjeta de producto
+    productCards.forEach(card => {
+        card.classList.add('hidden'); // Inicialmente las tarjetas están ocultas
+        observer.observe(card); // Observamos cada tarjeta
+    });
+
+    // Animación de hover para las tarjetas de productos
+    productCards.forEach(card => {
+        card.addEventListener('mouseover', () => {
+            card.style.transform = 'scale(1.05)';
+            card.style.boxShadow = '0 10px 15px rgba(0, 0, 0, 0.5)';
+        });
+        card.addEventListener('mouseout', () => {
+            card.style.transform = 'scale(1)';
+            card.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.3)';
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
+
+
+
+
+

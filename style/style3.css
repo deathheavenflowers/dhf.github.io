@@ -1,0 +1,210 @@
+/* General */
+body {
+    font-family:Ahonde, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcfc;
+    color: #fff;
+}
+
+h1, h2, h3 {
+    font-family:Ahonde, sans-serif;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header-img img {
+    max-width: 400px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.header-img img:hover {
+    transform: scale(1.1);
+}
+
+/* Barra de navegación */
+.top-bar {
+    background-color: #000;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #808080;
+    text-decoration: underline;
+}
+
+/* Main container */
+.container {
+    padding: 50px 15%;
+}
+
+/* Sección de productos */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Espaciado entre los productos */
+    justify-content: center;
+}
+
+.product-card-artist img{
+
+width: 450px;
+border-radius: 100%;
+
+
+
+}
+
+.product-card-artist {
+    flex: 1 1 23%; /* El 23% asegura que haya 4 productos por fila, con espacio entre ellos */
+    max-width: 500px; /* Limita el ancho máximo de cada tarjeta */
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+
+
+/* Colocamos el enlace fuera del área de fondo negro */
+.product-info-artist {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    justify-content: center;
+    align-items: center; /* Centra el contenido */
+    width: 100%;
+}
+
+/* Estilo para el texto de "BUY CD" */
+.buy-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    z-index: 2;
+    margin-bottom: -33px; /* Separar del nombre del álbum */
+}
+
+.buy-text:hover {
+    color: #808080;
+    text-decoration: underline;
+}
+
+/* Estilo para el nombre del álbum */
+.album-name {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #000000; /* Color del texto del álbum */
+    margin-top: 0px; /* Espacio entre el "BUY CD" y el nombre del álbum */
+}
+
+
+./* Animación de la tarjeta */
+.product-card-artist {
+    border-radius: 100%;
+    opacity: 0; /* Asegúrate de que las tarjetas sean visibles por defecto */
+    transform: scale(1); /* No tienen zoom al principio */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.product-card-artist:hover {
+    border-radius: 100%;
+    transform: scale(1.1); /* Acerca la tarjeta cuando el ratón está encima */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la tarjeta */
+}
+
+/* Cuando el producto entra en la vista, se hace visible */
+/* Inicialmente las tarjetas están ocultas */
+
+
+/* Cuando las tarjetas son visibles */
+
+
+.separator {
+    border: 5px;
+    border-top: 60px solid #000; /* Barra de 2px de grosor en color negro */
+    width: 100%;
+    margin: 0; /* Espacio arriba y abajo de la barra */
+
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    font-size: 1rem;
+    color: #bbb;
+    margin-top: 40px;
+}
+
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 10%;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .product-card-artist {
+        width: 100%;
+    }
+
+    .nav-list li {
+        margin: 0 10px;
+    }
+
+    .nav-list a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-img img {
+        max-width: 300px;
+    }
+}

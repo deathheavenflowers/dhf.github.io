@@ -1,0 +1,114 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;  /* Fondo oscuro similar */
+    color: #fff;  /* Texto blanco */
+}
+
+h1, h2, h3 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+}
+
+/* Header */
+header {
+    background-color: #000;  /* Fondo oscuro para el encabezado */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-img img {
+    max-width: 500px;
+    height: auto;
+}
+
+/* Barra de navegación */
+.top-bar {
+    background-color: #000;  /* Un tono más oscuro para la barra de navegación */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: ;
+}
+
+.nav-list a:hover {
+    color: #ff6000;  /* Color al pasar el ratón (puede ajustarse según tu preferencia) */
+}
+
+/* Main container */
+.container {
+    padding: 40px 10%;
+
+}
+
+/* Sección de productos */
+
+.product-grid {
+    display: flex; /* Use flexbox to arrange items in a row */
+    gap: 20px; /* Space between items */
+    overflow-x: auto; /* Allows horizontal scrolling if necessary */
+
+.product-card {
+    flex: 0 0 auto; /* Ensures items don't shrink or grow and maintain their width */
+    width: 250px; /* You can adjust the width as needed */
+}
+
+.product-details {
+    margin-top: 10px;
+}
+
+.product-details h3 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+.product-details p {
+    font-size: 1rem;
+}
+
+ .compras a {
+     flex: 0 0 auto; /* Ensures each product stays at its original size */
+    width: 250px; 
+  color: inherit !important; /* Removes the color */
+  text-decoration: none !important; /* Removes the underline */
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    font-size: 1rem;
+    margin-top: 40px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;  /* Para pantallas más pequeñas */
+    }
+}
+
